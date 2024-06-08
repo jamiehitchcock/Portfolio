@@ -75,27 +75,34 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full"
+          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me here
-          <BsArrowRight />
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          href=""
-          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full"
+        // add destination
+          href="/CV.pdf"
+          target="_blank"
+          download 
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
         >
           Download CV
-          <HiDownload />
+          <HiDownload className="opacity-70 group-hover:translate-y-1 transition" />
         </a>
         <a
+        // add destination
           href=""
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full"
+          target="_blank"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
           <BsLinkedin />
         </a>
         <a
+        // add destination
           href=""
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full"
+          target="_blank"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
           <FaGithub />
         </a>
@@ -105,7 +112,7 @@ export default function Intro() {
       <p className="px-4 text-left">
         Thank you for visiting my portfolio. I love to write code and create
         interactive websites. I graduated from a web development bootcamp with
-        <b>Bath Spa University / Institude Of Code</b> where I was awarded the
+        <b> Bath Spa University / Institude Of Code</b> where I was awarded the
         prize of <b>Star Pupil</b> and <b>Best Portfolio</b>. I regularly return
         as a testimonial student to inspire new cohorts. Most of my knowledge
         and skills are self taught and I am gripped by the challenges that
