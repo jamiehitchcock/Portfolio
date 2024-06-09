@@ -84,7 +84,7 @@ export const portfolioData = [
   {
     title: "Roman Numeral Convertor",
     description:
-      "Enter a number and the algorithm will convert this into a Roman Numeral using Javascript. I created this as a challenge for part of a FreeCodeCamp accrediation on 'JavaScript Data Structures and Algorithyms.'",
+      "Enter a number and the algorithm will convert this into a Roman Numeral using Javascript. I created this as a challenge for part of a FreeCodeCamp accreditation on 'JavaScript Data Structures and Algorithyms.'",
     tags: ["JavaScript", "HTML", "CSS", "Algorithym"],
     imageUrl: placeholderImage,
   },
@@ -112,8 +112,8 @@ export const portfolioData = [
   {
     title: "JamieHitchcock.co.uk - V2",
     description:
-      "An improvement upon my first portfolio website, to test my skills in Next.js, React and Typescript.",
-    tags: ["Next.js","React.js","TypeScript", "Framer Motion"],
+      "An improvement upon my first portfolio website, to test my skills in Next.js, React and Typescript. Styled using Tailwind.",
+    tags: ["Next.js","React.js","TypeScript","Tailwind", "Framer Motion"],
     imageUrl: placeholderImage,
   },
 ] as const;
