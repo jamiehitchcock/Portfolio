@@ -52,7 +52,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, my name is <b>Jamie</b>.<br /> I'm a <b>Front End-Developer</b>{" "}
+        Hello, my name is <b>Jamie</b>.<br /> I'm a <b>Front-End Developer</b>{" "}
         with 2 years of professional experience.
       </motion.h1>
       <motion.div

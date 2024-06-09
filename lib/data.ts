@@ -15,8 +15,8 @@ export const navLinks = [
     hash: "#about",
   },
   {
-    name: "Projects",
-    hash: "#projects",
+    name: "Portfolio",
+    hash: "#portfolio",
   },
   {
     name: "Skills",
@@ -59,26 +59,61 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData = [
+export const portfolioData = [
   {
-    title: "CorpComment",
+    title: "FilmDB",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "A film app created using React to show a snapshot of a film, such as the poster, plot summary and a rating. Try searching for your favourite film.",
+    tags: ["React.js", "JavaScript", "SASS", "API"],
     imageUrl: placeholderImage,
   },
   {
-    title: "rmtDev",
+    title: "Command Center",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "A companion app for a live service video game called Helldivers 2, created in React. This uses API calls to update users with real time data relating to Helldivers 2. Meaning that you can get the latest news whilst on the go.",
+    tags: ["React.js", "JavaScript", "SASS", "API","React Router"],
     imageUrl: placeholderImage,
   },
   {
-    title: "Word Analytics",
+    title: "International Space Station Tracker",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "Track the location of the ISS against a world map in real time. This uses an API (WhereTheISS) to retrieve coordinates and velocity, then plots the location against a map using Leaflet.js and JavaScript.",
+    tags: ["Leaflet.js", "JavaScript", "HTML", "CSS", "API"],
+    imageUrl: placeholderImage,
+  },
+  {
+    title: "Roman Numeral Convertor",
+    description:
+      "Enter a number and the algorithm will convert this into a Roman Numeral using Javascript. I created this as a challenge for part of a FreeCodeCamp accrediation on 'JavaScript Data Structures and Algorithyms.'",
+    tags: ["JavaScript", "HTML", "CSS", "Algorithym"],
+    imageUrl: placeholderImage,
+  },
+  {
+    title: "Calculator",
+    description:
+      "A typical calculator created in React. You can interact with this by either clicking the buttons or using your keyboard.",
+    tags: ["React.js", "JavaScript", "SASS", "Complex State Management"],
+    imageUrl: placeholderImage,
+  },
+  {
+    title: "Pomodoro Timer",
+    description:
+      "A timer created for the pomodoro study method of 25 plus 5. I Created this in React as part of a 'Front-End Development Libraries' accreditation with FreeCodeCamp.",
+    tags: ["React.js", "JavaScript", "SASS", "Complex State Management"],
+    imageUrl: placeholderImage,
+  },
+  {
+    title: "Real-Time Stock Market Checker",
+    description:
+      "This allows you to enter a symbol for a stock and view realtime information on its performance using an API (StockData). Try any public stock such as  AAPL, GOOG, PG or KO.",
+    tags: ["JavaScript", "HTML", "CSS", "API"],
+    imageUrl: placeholderImage,
+  },
+  {
+    title: "JamieHitchcock.co.uk - V2",
+    description:
+      "An improvement upon my first portfolio website, to test my skills in Next.js, React and Typescript.",
+    tags: ["Next.js","React.js","TypeScript", "Framer Motion"],
     imageUrl: placeholderImage,
   },
 ] as const;
