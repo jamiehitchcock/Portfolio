@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
 
 const jsonBio = {
@@ -16,15 +19,19 @@ const jsonBio = {
 
 export default function About() {
   return (
-    <section className="mb-28 max-w-[50rem] text-left sm:mb-40 leading-8">
+    <motion.section
+      className="mb-28 max-w-[50rem] text-left sm:mb-40 leading-8"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.175 }}
+    >
       <SectionHeading>About Me</SectionHeading>
+      <div className="flex flex-col items-center">
+        <pre className="mb-3 bg-stone-800 text-lime-500 w-fit">
+          <code>{JSON.stringify(jsonBio, undefined, 2)}</code>
+        </pre>
+      </div>
       <p className="mb-3">
-        <div className="flex flex-col items-center">
-          <pre className="mb-3 bg-stone-800 text-lime-500 w-fit">
-            <code>{JSON.stringify(jsonBio, undefined, 2)}</code>
-          </pre>
-        </div>
-        <hr />
         Thank you for visiting my portfolio. I love to write code and create
         interactive websites. I graduated from a web development bootcamp with
         <b> Bath Spa University / Institude Of Code</b> where I was awarded the
@@ -36,6 +43,6 @@ export default function About() {
         life. When I am not working I love nothing more than to travel the
         world.
       </p>
-    </section>
+    </motion.section>
   );
 }
