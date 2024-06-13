@@ -7,7 +7,7 @@ import { navLinks } from "@/lib/data";
 import Link from "next/link";
 
 export default function Header() {
-  // set activeSection to home as default for conditional styling with clsx
+  // set activeSection for conditional styling with clsx
   const [activeSection, setActiveSection] = useState("Home");
 
   return (
@@ -42,7 +42,13 @@ export default function Header() {
                 {link.name}
                 {/* apply conditional background styling to active section */}
                 {activeSection === link.name && (
-                  <span className="bg-gray-200 rounded-full absolute inset-0 -z-10"></span>
+                  <motion.span className="bg-gray-200 rounded-full absolute inset-0 -z-10"
+                  layoutId="activeSection"
+                  transition={{
+                    type: "spring",
+                    stiffness: 200,
+                    damping:20,
+                  }}></motion.span>
                 )}
               </Link>
             </motion.li>
