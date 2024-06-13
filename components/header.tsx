@@ -1,11 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import clsx from "clsx";
 import { navLinks } from "@/lib/data";
 import Link from "next/link";
 
 export default function Header() {
+  // set activeSection to home as default for conditional styling with clsx
+  const [activeSection, setActiveSection] = useState("Home");
+
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -24,10 +28,22 @@ export default function Header() {
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition"
+                className={clsx(
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition",
+                  {
+                    // clsx to apply conditional text styling to active section
+                    "text-gray-950": activeSection === link.name,
+                  }
+                )}
                 href={link.hash}
+                // set active section when link is clicked
+                onClick={() => setActiveSection(link.name)}
               >
                 {link.name}
+                {/* apply conditional background styling to active section */}
+                {activeSection === link.name && (
+                  <span className="bg-gray-200 rounded-full absolute inset-0 -z-10"></span>
+                )}
               </Link>
             </motion.li>
           ))}
