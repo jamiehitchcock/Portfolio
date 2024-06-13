@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import { navLinks } from "@/lib/data";
 import Link from "next/link";
+import { useActiveSectionContext } from "@/context/active-section-context";
+
 
 export default function Header() {
-  // set activeSection for conditional styling with clsx
-  const [activeSection, setActiveSection] = useState("Home");
+  const {activeSection, setActiveSection} = useActiveSectionContext();
 
   return (
     <header className="z-[999] relative">
