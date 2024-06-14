@@ -1,8 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import SectionHeading from "./section-heading";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 const jsonBio = {
   name: {
@@ -18,8 +20,23 @@ const jsonBio = {
 };
 
 export default function About() {
+  // intersection observer
+  const { ref, inView } = useInView({
+    // set when 50% of about section in view
+    threshold: 0.5,
+  });
+  const { setActiveSection } = useActiveSectionContext();
+
+  // set active section if inView changes
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("About");
+    }
+  }, [inView, setActiveSection]);
+
   return (
     <motion.section
+      ref={ref}
       className="mb-28 max-w-[50rem] text-left sm:mb-40 leading-8 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
