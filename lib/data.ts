@@ -34,28 +34,20 @@ export const navLinks = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Bath Spa University - Web Development Bootcamp",
+    location: "Remote",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Web Development Bootcamp with Bath Spa University and Institute Of Code. I was recognised as the 'Star Pupil' and 'Best Portfolio' within the cohort of 40 students. I am often invited speak to new cohorts as a testimonial student.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2022",
   },
   {
     title: "Front-End Developer",
-    location: "Orlando, FL",
+    location: "Amersham",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I am currently a front-end developer at The Entertainer. The largest independent toy retailer in the UK.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "May 2022 - Current",
   },
 ] as const;
 
@@ -123,19 +115,13 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
-  "React",
+  "React.js",
   "Next.js",
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
+  "SASS",
+  "Figma",
+  "Bootstrap",
   "Framer Motion",
 ] as const;

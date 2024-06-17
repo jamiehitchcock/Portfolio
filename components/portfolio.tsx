@@ -11,7 +11,7 @@ export default function Portfolio() {
     const { ref } = useSectionInView("Portfolio", 0.2);
 
   return (
-    <section ref={ref} id="portfolio" className="scroll-mt-28">
+    <section ref={ref} id="portfolio" className="mb-28 scroll-mt-28">
       <SectionHeading>Portfolio</SectionHeading>
       <div>
         {portfolioData.map((project, index) => (
