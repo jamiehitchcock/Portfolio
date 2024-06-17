@@ -1,11 +1,8 @@
 "use client";
 
 import React, { useState, createContext, useContext } from "react";
-import { navLinks } from "@/lib/data";
-import SectionDivider from "@/components/section-divider";
+import type { SectionName } from "@/lib/types";
 
-// set typing as specific section name
-type SectionName = (typeof navLinks)[number]["name"];
 
 type ActiveSectionContextProviderProps = {
   children: React.ReactNode;

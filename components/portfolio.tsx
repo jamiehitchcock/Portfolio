@@ -1,27 +1,14 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 import SectionHeading from "./section-heading";
 import { portfolioData } from "@/lib/data";
 import Project from "./project";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Portfolio() {
-  // intersection observer
-  const { ref, inView } = useInView({
-    // set when 20% of portfoliio section is in view
-    threshold: 0.2,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  // set active section if inView changes
-  useEffect(() => {
-    // disable scroll effect for one second when nav is clicked
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Portfolio");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+    // custom hook for inView animation
+    const { ref } = useSectionInView("Portfolio", 0.2);
 
   return (
     <section ref={ref} id="portfolio" className="scroll-mt-28">

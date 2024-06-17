@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import SectionHeading from "./section-heading";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 const jsonBio = {
   name: {
@@ -20,20 +19,8 @@ const jsonBio = {
 };
 
 export default function About() {
-  // intersection observer
-  const { ref, inView } = useInView({
-    // set when 50% of about section in view
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  // set active section if inView changes
-  useEffect(() => {
-    // disable scroll effect for one second when nav is clicked
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("About");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  // custom hook for inView animation
+  const { ref } = useSectionInView("About");
 
   return (
     <motion.section

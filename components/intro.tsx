@@ -1,31 +1,18 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Link from "next/link";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import portrait from "@/public/images/portrait.jpeg";
 import { FaGithub } from "react-icons/fa";
 
 export default function Intro() {
-  // intersection observer
-  const { ref, inView } = useInView({
-    // set when 50% of portfoliio section is in view
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  // set active section if inView changes
-  useEffect(() => {
-    // disable scroll effect for one second when nav is clicked
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  // custom hook for inView animation
+  const { ref } = useSectionInView("Home");
 
   return (
     <section
