@@ -12,24 +12,27 @@ import portrait from "@/public/images/portrait.jpeg";
 import { FaGithub } from "react-icons/fa";
 
 export default function Intro() {
-    // intersection observer
-    const { ref, inView } = useInView(
-      {
-        // set when 50% of portfoliio section is in view
-        threshold: 0.5,
-      }
-    );
-    const { setActiveSection } = useActiveSectionContext();
-  
-    // set active section if inView changes
-    useEffect(() => {
-      if (inView) {
-        setActiveSection("Home");
-      }
-    }, [inView, setActiveSection]);
+  // intersection observer
+  const { ref, inView } = useInView({
+    // set when 50% of portfoliio section is in view
+    threshold: 0.5,
+  });
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+
+  // set active section if inView changes
+  useEffect(() => {
+    // disable scroll effect for one second when nav is clicked
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
 
   return (
-    <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28">
+    <section
+      ref={ref}
+      id="home"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28"
+    >
       <div className="flex items-center justify-center">
         {/* relative to anchor emoji in absolute */}
         <div className="relative">

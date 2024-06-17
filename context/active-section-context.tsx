@@ -2,6 +2,7 @@
 
 import React, { useState, createContext, useContext } from "react";
 import { navLinks } from "@/lib/data";
+import SectionDivider from "@/components/section-divider";
 
 // set typing as specific section name
 type SectionName = (typeof navLinks)[number]["name"];
@@ -13,6 +14,8 @@ type ActiveSectionContextProviderProps = {
 type ActiveSectionContextType = {
   activeSection: SectionName;
   setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  timeOfLastClick: number;
+  setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export const ActiveSectionContext =
@@ -23,12 +26,16 @@ export default function ActiveSectionContextProvider({
 }: ActiveSectionContextProviderProps) {
   // set activeSection for conditional styling with clsx
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
+  // disable nav animation that triggers on scroll for one second when a user clicks the navigation
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
   return (
     <ActiveSectionContext.Provider
       value={{
         activeSection,
         setActiveSection,
+        timeOfLastClick,
+        setTimeOfLastClick
       }}
     >
       {children}

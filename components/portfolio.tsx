@@ -9,20 +9,19 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Portfolio() {
   // intersection observer
-  const { ref, inView } = useInView(
-    {
-      // set when 20% of portfoliio section is in view
-      threshold: 0.2,
-    }
-  );
-  const { setActiveSection } = useActiveSectionContext();
+  const { ref, inView } = useInView({
+    // set when 20% of portfoliio section is in view
+    threshold: 0.2,
+  });
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
   // set active section if inView changes
   useEffect(() => {
-    if (inView) {
+    // disable scroll effect for one second when nav is clicked
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("Portfolio");
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, timeOfLastClick]);
 
   return (
     <section ref={ref} id="portfolio" className="scroll-mt-28">

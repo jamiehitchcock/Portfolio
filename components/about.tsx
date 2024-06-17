@@ -25,14 +25,15 @@ export default function About() {
     // set when 50% of about section in view
     threshold: 0.5,
   });
-  const { setActiveSection } = useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
   // set active section if inView changes
   useEffect(() => {
-    if (inView) {
+    // disable scroll effect for one second when nav is clicked
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("About");
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, timeOfLastClick]);
 
   return (
     <motion.section

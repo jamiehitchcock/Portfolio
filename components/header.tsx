@@ -9,7 +9,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 
 
 export default function Header() {
-  const {activeSection, setActiveSection} = useActiveSectionContext();
+  const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
 
   return (
     <header className="z-[999] relative">
@@ -38,7 +38,10 @@ export default function Header() {
                 )}
                 href={link.hash}
                 // set active section when link is clicked
-                onClick={() => setActiveSection(link.name)}
+                onClick={() => {
+                  setActiveSection(link.name)
+                  setTimeOfLastClick(Date.now())
+                }}
               >
                 {link.name}
                 {/* apply conditional background styling to active section */}
