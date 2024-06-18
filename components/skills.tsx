@@ -8,7 +8,13 @@ import { useSectionInView } from "@/lib/hooks";
 
 const fadeInAnimationVariants = {
   initial: { opacity: 0, y: 100 },
-  animate: { opacity: 1, y: 0 },
+  animate: (index: number) => {
+    return {
+      opacity: 1,
+      y: 0,
+      transition: { delay: 0.05 * index },
+    };
+  },
 };
 
 export default function Skills() {
@@ -22,7 +28,9 @@ export default function Skills() {
       className="mb-28 max-w-[50rem] sm:mb-40 scroll-mt-28"
     >
       <SectionHeading>Skills</SectionHeading>
-      <p className="mb-3 text-center">Creating interactive websites that look great on all screen sizes.</p>
+      <p className="mb-3 text-center">
+        Creating interactive websites that look great on all screen sizes.
+      </p>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
@@ -32,6 +40,8 @@ export default function Skills() {
             initial="initial"
             whileInView="animate"
             // viewport={{once:true}}
+            // pass index through for staggered delay
+            custom={index}
           >
             {skill}
           </motion.li>
