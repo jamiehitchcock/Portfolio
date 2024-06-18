@@ -39,7 +39,7 @@ export default function About() {
       </div>
       <p className="mb-3">
         Thank you for visiting my portfolio. I love to write code and create
-        interactive websites. I graduated from a web development bootcamp with
+        interactive websites. I graduated from a <b>Web Development Bootcamp</b> with
         <b> Bath Spa University / Institude Of Code</b> where I was awarded the
         prize of <b>Star Pupil</b> and <b>Best Portfolio</b>. I regularly return
         as a testimonial student to inspire new cohorts. Most of my knowledge

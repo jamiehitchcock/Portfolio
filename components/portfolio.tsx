@@ -13,6 +13,7 @@ export default function Portfolio() {
   return (
     <section ref={ref} id="portfolio" className="mb-28 scroll-mt-28">
       <SectionHeading>Portfolio</SectionHeading>
+      <p className="mb-3 text-center">Here are some of the projects that I have created to showcase my skills. </p>
       <div>
         {portfolioData.map((project, index) => (
           <React.Fragment key={index}>
