@@ -34,20 +34,22 @@ export const navLinks = [
 
 export const experiencesData = [
   {
-    title: "Bath Spa University - Web Development Bootcamp",
-    location: "Remote",
-    description:
-      "Web Development Bootcamp with Bath Spa University and Institute Of Code. I was recognised as the 'Star Pupil' and 'Best Portfolio' within the cohort of 40 students. I am often invited speak to new cohorts as a testimonial student.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2022",
-  },
-  {
     title: "Front-End Developer",
-    location: "Amersham",
+    organisation: "The Entertainer",
+    location: "Hybrid - Amersham",
     description:
-      "I am currently a front-end developer at The Entertainer. The largest independent toy retailer in the UK.",
+      "I am currently a Front-End Developer at The Entertainer. The largest independent toy retailer in the UK.",
     icon: React.createElement(CgWorkAlt),
     date: "May 2022 - Current",
+  },
+  {
+    title: "Web Development Bootcamp",
+    organisation: "Bath Spa University",
+    location: "Remote",
+    description:
+      "I won the awards of 'Star Pupil' and 'Best Portfolio'.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2022",
   },
 ] as const;
 
@@ -63,7 +65,7 @@ export const portfolioData = [
     title: "Command Center",
     description:
       "A companion app for a live service video game called Helldivers 2, created in React. This uses API calls to update users with real time data relating to Helldivers 2. Meaning that you can get the latest news whilst on the go.",
-    tags: ["React.js", "JavaScript", "SASS", "API","React Router"],
+    tags: ["React.js", "JavaScript", "SASS", "API", "React Router"],
     imageUrl: placeholderImage,
   },
   {
@@ -105,7 +107,7 @@ export const portfolioData = [
     title: "JamieHitchcock.co.uk - V2",
     description:
       "An improvement upon my first portfolio website, to test my skills in Next.js, React and Typescript. Styled using Tailwind.",
-    tags: ["Next.js","React.js","TypeScript","Tailwind", "Framer Motion"],
+    tags: ["Next.js", "React.js", "TypeScript", "Tailwind", "Framer Motion"],
     imageUrl: placeholderImage,
   },
 ] as const;
