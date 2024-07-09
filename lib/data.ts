@@ -15,16 +15,16 @@ export const navLinks = [
     hash: "#about",
   },
   {
-    name: "Portfolio",
-    hash: "#portfolio",
-  },
-  {
     name: "Skills",
     hash: "#skills",
   },
   {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Portfolio",
+    hash: "#portfolio",
   },
   {
     name: "Contact",
@@ -46,8 +46,7 @@ export const experiencesData = [
     title: "Web Development Bootcamp",
     organisation: "Bath Spa University",
     location: "Remote",
-    description:
-      "I won the awards of 'Star Pupil' and 'Best Portfolio'.",
+    description: "I won the awards of 'Star Pupil' and 'Best Portfolio'.",
     icon: React.createElement(LuGraduationCap),
     date: "2022",
   },

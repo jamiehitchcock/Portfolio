@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { navLinks } from "@/lib/data";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isClick, setIsClick] = useState(false);
@@ -15,58 +17,33 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-black z-10 fixed top-0 w-[100%]">
+      <nav className="bg-white text-gray-500 bg-opacity-80 backdrop-blur-[0.5rem] z-10 fixed top-0 w-[100%] shadow-lg shadow-black/[0.03]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="text-white">Jamie Hitchcock</div>
+                <div className="text-black">Jamie Hitchcock</div>
               </div>
             </div>
+
+            {/* desktop navbar links*/}
             <div className="hidden md:block">
-              <div className="ml-4 flex items-center space-x-4">
-                <a
-                  href="#home"
-                  className="text-white hover:bg-white hover:text-black rounded-lg p-1"
-                >
-                  Home
-                </a>
-                <a
-                  href="#about"
-                  className="text-white hover:bg-white hover:text-black rounded-lg p-1"
-                >
-                  About
-                </a>
-                <a
-                  href="#skills"
-                  className="text-white hover:bg-white hover:text-black rounded-lg p-1"
-                >
-                  Skills
-                </a>
-                <a
-                  href="#experience"
-                  className="text-white hover:bg-white hover:text-black rounded-lg p-1"
-                >
-                  Experience
-                </a>
-                <a
-                  href="#portfolio"
-                  className="text-white hover:bg-white hover:text-black rounded-lg p-1"
-                >
-                  Portfolio
-                </a>
-                <a
-                  href="#contact"
-                  className="text-white hover:bg-white hover:text-black rounded-lg p-1"
-                >
-                  Contact
-                </a>
-              </div>
+              <ul className="ml-4 flex items-center space-x-4">
+                {navLinks.map((link) => (
+                  <Link
+                    href={link.hash}
+                    className="hover:text-gray-950 rounded-lg p-1 transition"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </ul>
             </div>
+
+            {/* hamburger button */}
             <div className="md:hidden flex items-center">
-              {/* hamburger button */}
               <button
-                className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none"
+                className="inline-flex items-center justify-center p-2 rounded-md hover:text-gray-950 transition focus:outline-none"
                 onClick={toggleNavbar}
               >
                 {/* change icon on toggle */}
@@ -105,52 +82,21 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
+        {/* mobile nav links */}
         {isClick && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a
-                href="#home"
-                className="block text-center text-white hover:bg-white hover:text-black rounded-lg py-2"
-                onClick={closeNavbar}
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="block text-center text-white hover:bg-white hover:text-black rounded-lg py-2"
-                onClick={closeNavbar}
-              >
-                About
-              </a>
-              <a
-                href="#skills"
-                className="block text-center text-white hover:bg-white hover:text-black rounded-lg py-2"
-                onClick={closeNavbar}
-              >
-                Skills
-              </a>
-              <a
-                href="#experience"
-                className="block text-center text-white hover:bg-white hover:text-black rounded-lg py-2"
-                onClick={closeNavbar}
-              >
-                Experience
-              </a>
-              <a
-                href="#portfolio"
-                className="block text-center text-white hover:bg-white hover:text-black rounded-lg py-2"
-                onClick={closeNavbar}
-              >
-                Portfolio
-              </a>
-              <a
-                href="#contact"
-                className="block text-center text-white hover:bg-white hover:text-black rounded-lg py-2"
-                onClick={closeNavbar}
-              >
-                Contact
-              </a>
-            </div>
+            <ul className="flex flex-col items-center px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navLinks.map((link) => (
+                <Link
+                  href={link.hash}
+                  className="block text-center hover:text-gray-950 transition rounded-lg p-2"
+                  onClick={closeNavbar}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </ul>
           </div>
         )}
       </nav>
