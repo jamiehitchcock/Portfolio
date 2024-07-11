@@ -1,11 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import clsx from "clsx";
 import { navLinks } from "@/lib/data";
 import Link from "next/link";
 import { GrMenu, GrClose } from "react-icons/gr";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Navbar() {
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   const [isClick, setIsClick] = useState(false);
 
   const toggleNavbar = () => {
@@ -32,8 +36,17 @@ export default function Navbar() {
               <ul className="ml-4 flex items-center space-x-4">
                 {navLinks.map((link) => (
                   <Link
+                    key={link.hash}
                     href={link.hash}
-                    className="hover:text-gray-950 rounded-lg p-1 transition"
+                    // set active section when link is clicked
+                    onClick={() => {
+                      setActiveSection(link.name);
+                      setTimeOfLastClick(Date.now());
+                    }}
+                    className={clsx("hover:text-gray-950 p-1 transition", {
+                      // clsx to apply conditional text styling to active section
+                      "text-gray-950": activeSection === link.name,
+                    })}
                   >
                     {link.name}
                   </Link>
@@ -49,9 +62,9 @@ export default function Navbar() {
               >
                 {/* change icon on toggle */}
                 {isClick ? (
-                  <GrClose className="text-3xl"/>
+                  <GrClose className="text-3xl" />
                 ) : (
-                  <GrMenu className="text-3xl"/>
+                  <GrMenu className="text-3xl" />
                 )}
               </button>
             </div>
@@ -64,9 +77,18 @@ export default function Navbar() {
             <ul className="flex flex-col items-center px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link) => (
                 <Link
+                  key={link.hash}
                   href={link.hash}
-                  className="block text-center hover:text-gray-950 transition rounded-lg p-2"
-                  onClick={closeNavbar}
+                  // set active section when link is clicked
+                  onClick={() => {
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                    closeNavbar();
+                  }}
+                  className={clsx("block text-center hover:text-gray-950 transition p-2", {
+                    // clsx to apply conditional text styling to active section
+                    "text-gray-950": activeSection === link.name,
+                  })}
                 >
                   {link.name}
                 </Link>
