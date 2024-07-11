@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import clsx from "clsx";
 import { navLinks } from "@/lib/data";
 import Link from "next/link";
@@ -35,21 +36,39 @@ export default function Navbar() {
             <div className="hidden md:block">
               <ul className="ml-4 flex items-center space-x-4">
                 {navLinks.map((link) => (
-                  <Link
+                  <motion.li
+                    className="flex relative"
                     key={link.hash}
-                    href={link.hash}
-                    // set active section when link is clicked
-                    onClick={() => {
-                      setActiveSection(link.name);
-                      setTimeOfLastClick(Date.now());
-                    }}
-                    className={clsx("hover:text-gray-950 p-1 transition", {
-                      // clsx to apply conditional text styling to active section
-                      "text-gray-950": activeSection === link.name,
-                    })}
+                    initial={{ y: -100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
                   >
-                    {link.name}
-                  </Link>
+                    <Link
+                      href={link.hash}
+                      // set active section when link is clicked
+                      onClick={() => {
+                        setActiveSection(link.name);
+                        setTimeOfLastClick(Date.now());
+                      }}
+                      className={clsx("hover:text-gray-950 p-1 transition", {
+                        // clsx to apply conditional text styling to active section
+                        "text-gray-950": activeSection === link.name,
+                      })}
+                    >
+                      {link.name}
+                      {/* apply conditional background styling to active section */}
+                      {activeSection === link.name && (
+                        <motion.span
+                          className="flex bg-gray-200 rounded-full absolute inset-0 -z-10"
+                          layoutId="activeSection"
+                          transition={{
+                            type: "spring",
+                            stiffness: 200,
+                            damping: 20,
+                          }}
+                        ></motion.span>
+                      )}
+                    </Link>
+                  </motion.li>
                 ))}
               </ul>
             </div>
@@ -76,22 +95,43 @@ export default function Navbar() {
           <div className="md:hidden">
             <ul className="flex flex-col items-center px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link) => (
-                <Link
+                <motion.li
+                  className="flex relative"
                   key={link.hash}
-                  href={link.hash}
-                  // set active section when link is clicked
-                  onClick={() => {
-                    setActiveSection(link.name);
-                    setTimeOfLastClick(Date.now());
-                    closeNavbar();
-                  }}
-                  className={clsx("block text-center hover:text-gray-950 transition p-2", {
-                    // clsx to apply conditional text styling to active section
-                    "text-gray-950": activeSection === link.name,
-                  })}
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
                 >
-                  {link.name}
-                </Link>
+                  <Link
+                    href={link.hash}
+                    // set active section when link is clicked
+                    onClick={() => {
+                      setActiveSection(link.name);
+                      setTimeOfLastClick(Date.now());
+                      closeNavbar();
+                    }}
+                    className={clsx(
+                      "block text-center hover:text-gray-950 transition p-2",
+                      {
+                        // clsx to apply conditional text styling to active section
+                        "text-gray-950": activeSection === link.name,
+                      }
+                    )}
+                  >
+                    {link.name}
+                    {/* apply conditional background styling to active section */}
+                    {activeSection === link.name && (
+                      <motion.span
+                        className="flex bg-gray-200 rounded-full absolute inset-0 -z-10"
+                        layoutId="activeSection"
+                        transition={{
+                          type: "spring",
+                          stiffness: 200,
+                          damping: 20,
+                        }}
+                      ></motion.span>
+                    )}
+                  </Link>
+                </motion.li>
               ))}
             </ul>
           </div>
