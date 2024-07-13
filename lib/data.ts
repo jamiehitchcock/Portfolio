@@ -59,13 +59,17 @@ export const portfolioData = [
       "A film app created using React to show a snapshot of a film, such as the poster, plot summary and a rating. Try searching for your favourite film.",
     tags: ["React.js", "JavaScript", "SASS", "API"],
     imageUrl: placeholderImage,
+    demo: "https://react-filmdb.netlify.app/",
+    code: "https://github.com/jamiehitchcock/FE-Lib-Training/tree/main/03-Practice-Project-2/React-Films-App",
   },
   {
-    title: "Command Center",
+    title: "Command Centre",
     description:
       "A companion app for a live service video game called Helldivers 2, created in React. This uses API calls to update users with real time data relating to Helldivers 2. Meaning that you can get the latest news whilst on the go.",
     tags: ["React.js", "JavaScript", "SASS", "API", "React Router"],
     imageUrl: placeholderImage,
+    demo: "https://command-centre.netlify.app",
+    code: "https://github.com/jamiehitchcock/FE-Lib-Training/tree/main/02-API-Practice-Project/05-Sass-Command-Centre",
   },
   {
     title: "International Space Station Tracker",
@@ -87,6 +91,8 @@ export const portfolioData = [
       "A typical calculator created in React. You can interact with this by either clicking the buttons or using your keyboard.",
     tags: ["React.js", "JavaScript", "SASS", "Complex State Management"],
     imageUrl: placeholderImage,
+    demo: "https://react-calculator-jh.netlify.app/",
+    code: "https://github.com/jamiehitchcock/FCC_FE-Lib_Projects/tree/main/Calculator",
   },
   {
     title: "Pomodoro Timer",
@@ -94,6 +100,8 @@ export const portfolioData = [
       "A timer created for the pomodoro study method of 25 plus 5. I Created this in React as part of a 'Front-End Development Libraries' accreditation with FreeCodeCamp.",
     tags: ["React.js", "JavaScript", "SASS", "Complex State Management"],
     imageUrl: placeholderImage,
+    demo: "https://react-pomodoro-timer-jh.netlify.app",
+    code: "https://github.com/jamiehitchcock/FCC_FE-Lib_Projects/tree/main/Pomodoro_Timer",
   },
   {
     title: "Real-Time Stock Market Checker",
@@ -108,6 +116,8 @@ export const portfolioData = [
       "An improvement upon my first portfolio website, to test my skills in Next.js, React and Typescript. Styled using Tailwind.",
     tags: ["Next.js", "React.js", "TypeScript", "Tailwind", "Framer Motion"],
     imageUrl: placeholderImage,
+    demo: "https://jamiehitchcock.co.uk/",
+    code: "https://github.com/jamiehitchcock/Portfolio",
   },
 ] as const;
 

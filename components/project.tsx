@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { portfolioData } from "@/lib/data";
+import { FaEye, FaCode } from "react-icons/fa";
 
 // set each prop typing as specific to project
 type PortfolioProps = (typeof portfolioData)[number];
@@ -45,6 +46,14 @@ export default function Project({
               </li>
             ))}
           </ul>
+          <div className="flex flex-row justify-evenly w-[100%] mt-4">
+            <div className="flex flex-col items-center border border-black/5 rounded-lg p-1 font-semibold">
+              Demo <FaEye className="text-3xl"/>
+            </div>
+            <div className="flex flex-col items-center border border-black/5 rounded-lg p-1 font-semibold">
+              Code <FaCode className="text-3xl"/>
+            </div>
+          </div>
         </div>
         <Image
           src={imageUrl}
