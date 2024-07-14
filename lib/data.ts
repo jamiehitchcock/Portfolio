@@ -77,6 +77,8 @@ export const portfolioData = [
       "Track the location of the ISS against a world map in real time. This uses an API (WhereTheISS) to retrieve coordinates and velocity, then plots the location against a map using Leaflet.js and JavaScript.",
     tags: ["Leaflet.js", "JavaScript", "HTML", "CSS", "API"],
     imageUrl: placeholderImage,
+    demo: "https://jamiehitchcock.co.uk/",
+    code: "https://github.com/jamiehitchcock/Portfolio",
   },
   {
     title: "Roman Numeral Convertor",
@@ -84,6 +86,8 @@ export const portfolioData = [
       "Enter a number and the algorithm will convert this into a Roman Numeral using Javascript. I created this as a challenge for part of a FreeCodeCamp accreditation on 'JavaScript Data Structures and Algorithyms.'",
     tags: ["JavaScript", "HTML", "CSS", "Algorithym"],
     imageUrl: placeholderImage,
+    demo: "https://jamiehitchcock.co.uk/",
+    code: "https://github.com/jamiehitchcock/Portfolio",
   },
   {
     title: "Calculator",
@@ -109,6 +113,8 @@ export const portfolioData = [
       "This allows you to enter a symbol for a stock and view realtime information on its performance using an API (StockData). Try any public stock such as  AAPL, GOOG, PG or KO.",
     tags: ["JavaScript", "HTML", "CSS", "API"],
     imageUrl: placeholderImage,
+    demo: "https://jamiehitchcock.co.uk/",
+    code: "https://github.com/jamiehitchcock/Portfolio",
   },
   {
     title: "JamieHitchcock.co.uk - V2",
