@@ -49,7 +49,7 @@ export default function Navbar() {
                         setActiveSection(link.name);
                         setTimeOfLastClick(Date.now());
                       }}
-                      className={clsx("hover:text-gray-950 p-1 transition", {
+                      className={clsx("hover:text-gray-950 p-2 transition", {
                         // clsx to apply conditional text styling to active section
                         "text-gray-950": activeSection === link.name,
                       })}
