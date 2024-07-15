@@ -48,7 +48,7 @@ export const experiencesData = [
     location: "Remote",
     description: "I won the awards of 'Star Pupil' and 'Best Portfolio'.",
     icon: React.createElement(LuGraduationCap),
-    date: "2022",
+    date: "January - April 2022",
   },
 ] as const;
 
@@ -81,24 +81,6 @@ export const portfolioData = [
     code: "https://github.com/jamiehitchcock/Portfolio",
   },
   {
-    title: "Roman Numeral Convertor",
-    description:
-      "Enter a number and the algorithm will convert this into a Roman Numeral using Javascript. I created this as a challenge for part of a FreeCodeCamp accreditation on 'JavaScript Data Structures and Algorithyms.'",
-    tags: ["JavaScript", "HTML", "CSS", "Algorithym"],
-    imageUrl: placeholderImage,
-    demo: "https://jamiehitchcock.co.uk/",
-    code: "https://github.com/jamiehitchcock/Portfolio",
-  },
-  {
-    title: "Calculator",
-    description:
-      "A typical calculator created in React. You can interact with this by either clicking the buttons or using your keyboard.",
-    tags: ["React.js", "JavaScript", "SASS", "Complex State Management"],
-    imageUrl: placeholderImage,
-    demo: "https://react-calculator-jh.netlify.app/",
-    code: "https://github.com/jamiehitchcock/FCC_FE-Lib_Projects/tree/main/Calculator",
-  },
-  {
     title: "Pomodoro Timer",
     description:
       "A timer created for the pomodoro study method of 25 plus 5. I Created this in React as part of a 'Front-End Development Libraries' accreditation with FreeCodeCamp.",
@@ -106,6 +88,24 @@ export const portfolioData = [
     imageUrl: placeholderImage,
     demo: "https://react-pomodoro-timer-jh.netlify.app",
     code: "https://github.com/jamiehitchcock/FCC_FE-Lib_Projects/tree/main/Pomodoro_Timer",
+  },
+  {
+    title: "Calculator",
+    description:
+      "A typical calculator created in React. You can interact with this by either clicking the buttons or using your keyboard.",
+    tags: ["React.js", "JavaScript", "SASS","Algorithms", "Complex State Management"],
+    imageUrl: placeholderImage,
+    demo: "https://react-calculator-jh.netlify.app/",
+    code: "https://github.com/jamiehitchcock/FCC_FE-Lib_Projects/tree/main/Calculator",
+  },
+  {
+    title: "Roman Numeral Convertor",
+    description:
+      "Enter a number and the algorithm will convert this into a Roman Numeral using Javascript. I created this as a challenge for part of a FreeCodeCamp accreditation on 'JavaScript Data Structures and Algorithyms.'",
+    tags: ["JavaScript", "HTML", "CSS", "Algorithms"],
+    imageUrl: placeholderImage,
+    demo: "https://jamiehitchcock.co.uk/",
+    code: "https://github.com/jamiehitchcock/Portfolio",
   },
   {
     title: "Real-Time Stock Market Checker",
