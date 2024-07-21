@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 import SectionHeading from "./section-heading";
@@ -11,6 +11,26 @@ import { useSectionInView } from "@/lib/hooks";
 export default function Contact() {
   // custom hook for inView animation
   const { ref } = useSectionInView("Contact");
+
+  function greetDay() {
+    const dayNames = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    let calendar = new Date();
+    let today = dayNames[calendar.getDay()];
+    return (
+      <p>
+        Thank you and have an excellent{" "}
+        <span className="font-semibold">{today}!</span>
+      </p>
+    );
+  }
 
   return (
     <section
@@ -22,7 +42,7 @@ export default function Contact() {
       <div className="flex flex-col items-center"></div>
       <p className="mb-3 text-center">I would like to hear from you.</p>
 
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 px-4 text-lg font-medium">
+      <div className="mb-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 px-4 text-lg font-medium">
         <a
           href="mailto:jamiehitchcock@hotmail.co.uk"
           target="_blank"
@@ -46,6 +66,8 @@ export default function Contact() {
           <FaGithub />
         </a>
       </div>
+
+      <div>{greetDay()}</div>
     </section>
   );
 }
