@@ -56,7 +56,7 @@ export default function Portfolio() {
 
       {/* filter buttons on desktop */}
       <div className="hidden md:block">
-        <ul className="flex flex-wrap gap-4 my-2">
+        <ul className="flex flex-wrap gap-4 my-2 text-gray-500">
           <button
             className={clsx("hover:text-gray-950 p-2 rounded-full", {
               "bg-gray-200 text-gray-950": technology === "All",
