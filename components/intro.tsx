@@ -76,7 +76,7 @@ export default function Intro() {
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-        <a
+        {/* <a
           // add destination
           href="/CV.pdf"
           target="_blank"
@@ -85,10 +85,10 @@ export default function Intro() {
         >
           Download CV
           <HiDownload className="opacity-70 group-hover:translate-y-1 transition" />
-        </a>
+        </a> */}
         <a
           // add destination
-          href=""
+          href="https://www.linkedin.com/in/jamie-hitchcock-4641071b0/"
           target="_blank"
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
@@ -96,7 +96,7 @@ export default function Intro() {
         </a>
         <a
           // add destination
-          href=""
+          href="https://github.com/jamiehitchcock"
           target="_blank"
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
