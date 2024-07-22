@@ -43,7 +43,12 @@ export default function Skills() {
             // pass index through for staggered delay
             custom={index}
           >
-            {skill}
+            <div className="flex flex-col justify-center items-center">
+              {skill.name}
+              <span className="text-2xl md:text-3xl text-violet-700">
+                {skill.icon}
+              </span>
+            </div>
           </motion.li>
         ))}
       </ul>

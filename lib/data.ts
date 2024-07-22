@@ -1,6 +1,19 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiGit,
+  SiTailwindcss,
+  SiSass,
+  SiFigma,
+  SiBootstrap,
+} from "react-icons/si";
 import { LuGraduationCap } from "react-icons/lu";
 
 import placeholderImage from "@/public/placeholderImage.png";
@@ -93,7 +106,13 @@ export const portfolioData = [
     title: "Calculator",
     description:
       "A typical calculator created in React. You can interact with this by either clicking the buttons or using your keyboard.",
-    tags: ["React.js", "JavaScript", "SASS","Algorithms", "Complex State Management"],
+    tags: [
+      "React.js",
+      "JavaScript",
+      "SASS",
+      "Algorithms",
+      "Complex State Management",
+    ],
     imageUrl: placeholderImage,
     demo: "https://react-calculator-jh.netlify.app/",
     code: "https://github.com/jamiehitchcock/FCC_FE-Lib_Projects/tree/main/Calculator",
@@ -128,17 +147,16 @@ export const portfolioData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React.js",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "SASS",
-  "Figma",
-  "Bootstrap",
-  "Framer Motion",
+  { name: "HTML", icon: React.createElement(SiHtml5) },
+  { name: "CSS", icon: React.createElement(SiCss3) },
+  { name: "JavaScript", icon: React.createElement(SiJavascript) },
+  { name: "TypeScript", icon: React.createElement(SiTypescript) },
+  { name: "React.js", icon: React.createElement(SiReact) },
+  { name: "Next.js", icon: React.createElement(SiNextdotjs) },
+  { name: "Node.js", icon: React.createElement(SiNodedotjs) },
+  { name: "Git", icon: React.createElement(SiGit) },
+  { name: "Tailwind", icon: React.createElement(SiTailwindcss) },
+  { name: "SASS", icon: React.createElement(SiSass) },
+  { name: "Figma", icon: React.createElement(SiFigma) },
+  { name: "Bootstrap", icon: React.createElement(SiBootstrap) },
 ] as const;
