@@ -28,7 +28,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="text-black">Jamie Hitchcock</div>
+                <div className="text-black text-2xl">Jamie Hitchcock</div>
               </div>
             </div>
 
@@ -93,10 +93,10 @@ export default function Navbar() {
         {/* mobile nav links */}
         {isClick && (
           <div className="md:hidden">
-            <ul className="flex flex-col items-center px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <ul className="flex flex-col items-center justify-start h-[100vh] px-2 space-y-[1rem] sm:px-3">
               {navLinks.map((link) => (
                 <motion.li
-                  className="flex relative"
+                  className="flex relative text-2xl"
                   key={link.hash}
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -110,7 +110,7 @@ export default function Navbar() {
                       closeNavbar();
                     }}
                     className={clsx(
-                      "block text-center hover:text-gray-950 transition p-2",
+                      "block text-center hover:text-gray-950 transition p-4",
                       {
                         // clsx to apply conditional text styling to active section
                         "text-gray-950": activeSection === link.name,
