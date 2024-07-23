@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white text-gray-500 bg-opacity-80 backdrop-blur-[0.5rem] z-10 fixed top-0 w-[100%] shadow-lg shadow-black/[0.03]">
+      <nav className="bg-white text-gray-500 z-10 fixed top-0 w-[100%] shadow-lg shadow-black/[0.03]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -51,9 +51,9 @@ export default function Navbar() {
                         setActiveSection(link.name);
                         setTimeOfLastClick(Date.now());
                       }}
-                      className={clsx("hover:text-gray-950 p-2 transition", {
+                      className={clsx("hover:text-violet-800 p-2 transition", {
                         // clsx to apply conditional text styling to active section
-                        "text-gray-950": activeSection === link.name,
+                        "text-white hover:text-white": activeSection === link.name,
                       })}
                     >
                       {link.name}
@@ -78,7 +78,7 @@ export default function Navbar() {
             {/* hamburger button */}
             <div className="md:hidden flex items-center">
               <button
-                className="inline-flex items-center justify-center p-2 rounded-md hover:text-gray-950 transition focus:outline-none"
+                className="inline-flex items-center justify-center p-2 rounded-md text-violet-600 hover:text-violet-800 transition focus:outline-none"
                 onClick={toggleNavbar}
               >
                 {/* change icon on toggle */}
@@ -112,10 +112,10 @@ export default function Navbar() {
                       closeNavbar();
                     }}
                     className={clsx(
-                      "block text-center hover:text-gray-950 transition p-4",
+                      "block text-center hover:text-violet-800 transition p-4",
                       {
                         // clsx to apply conditional text styling to active section
-                        "text-gray-950": activeSection === link.name,
+                        "text-white hover:text-white": activeSection === link.name,
                       }
                     )}
                   >
