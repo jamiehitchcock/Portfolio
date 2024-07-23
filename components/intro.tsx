@@ -3,9 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
+// import Link from "next/link";
 import { useSectionInView } from "@/lib/hooks";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import {  BsLinkedin } from "react-icons/bs";
+// import { BsArrowRight } from "react-icons/bs";
 // import { HiDownload } from "react-icons/hi";
 import portrait from "@/public/images/portrait.jpeg";
 import { FaGithub } from "react-icons/fa";
@@ -68,19 +69,19 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
-        <Link
+        {/* <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-violet-800 active:scale-105 transition"
+          className="hidden md:flex group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-violet-800 active:scale-105 transition"
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
+        </Link> */}
         {/* <a
           // add destination
           href="/CV.pdf"
           target="_blank"
           download
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:text-violet-700 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          className="hidden md:flex group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:text-violet-700 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
         >
           Download CV
           <HiDownload className="opacity-70 group-hover:translate-y-1 transition" />

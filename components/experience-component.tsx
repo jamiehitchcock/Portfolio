@@ -24,17 +24,17 @@ export default function ExperienceComponent({
         padding: "1.3rem 2rem",
       }}
       contentArrowStyle={{
-        borderRight: "0.4rem solid #9ca3af",
+        borderRight: "0.4rem solid #6d28d9",
       }}
       date={date}
       icon={icon}
       iconStyle={{
         background: "white",
-        color: "black",
+        color: "#6d28d9",
       }}
     >
       <h3 className="font-semibold">
-        {title} - <span>{organisation}</span>
+        {title} - <span className="text-decoration-line: underline decoration-2 decoration-violet-700">{organisation}</span>
       </h3>
       <p className="font-normal !mt-0">{location}</p>
       <p ref={ref} className="!mt-1 font-normal text-gray-700">
