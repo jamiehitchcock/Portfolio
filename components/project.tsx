@@ -53,14 +53,14 @@ export default function Project({
             <a
               href={demo}
               target="_blank"
-              className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
+              className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
             >
               <FaEye />
             </a>
             <a
               href={code}
               target="_blank"
-              className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
+              className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
             >
               <FaCode />
             </a>

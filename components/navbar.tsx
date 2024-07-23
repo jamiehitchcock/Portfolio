@@ -28,7 +28,9 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="text-black text-2xl">Jamie Hitchcock</div>
+                <div className="text-gray-950 text-2xl font-bold">
+                  <span className="text-violet-700">J</span>amie <span className="text-violet-700">H</span>itchcock
+                </div>
               </div>
             </div>
 
@@ -58,7 +60,7 @@ export default function Navbar() {
                       {/* apply conditional background styling to active section */}
                       {activeSection === link.name && (
                         <motion.span
-                          className="flex bg-gray-200 rounded-full absolute inset-0 -z-10"
+                          className="flex bg-violet-500 rounded-full absolute inset-0 -z-10"
                           layoutId="activeSection"
                           transition={{
                             type: "spring",
@@ -121,7 +123,7 @@ export default function Navbar() {
                     {/* apply conditional background styling to active section */}
                     {activeSection === link.name && (
                       <motion.span
-                        className="flex bg-gray-200 rounded-full absolute inset-0 -z-10"
+                        className="flex bg-violet-500 rounded-full absolute inset-0 -z-10"
                         layoutId="activeSection"
                         transition={{
                           type: "spring",

@@ -27,7 +27,7 @@ export default function Contact() {
     return (
       <p>
         Thank you and have an excellent{" "}
-        <span className="font-semibold">{today}!</span>
+        <span className="font-semibold text-violet-700">{today}!</span>
       </p>
     );
   }
@@ -47,21 +47,21 @@ export default function Contact() {
           href="mailto:jamiehitchcock@hotmail.co.uk"
           target="_blank"
           download
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
           <MdEmail />
         </a>
         <a
           href="https://www.linkedin.com/in/jamie-hitchcock-4641071b0/"
           target="_blank"
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
           <BsLinkedin />
         </a>
         <a
           href="https://github.com/jamiehitchcock"
           target="_blank"
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
           <FaGithub />
         </a>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useSectionInView } from "@/lib/hooks";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
+// import { HiDownload } from "react-icons/hi";
 import portrait from "@/public/images/portrait.jpeg";
 import { FaGithub } from "react-icons/fa";
 
@@ -60,7 +60,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, my name is <b>Jamie</b>.<br /> I&apos;m a <b>Front-End Developer</b> with 2 years of professional experience.
+        Hello, my name is <b className="text-violet-700">Jamie</b>.<br /> I&apos;m a <b className="text-violet-700">Front-End Developer</b> with 2 years of professional experience.
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 px-4 text-lg font-medium"
@@ -70,7 +70,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-violet-800 active:scale-105 transition"
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -80,7 +80,7 @@ export default function Intro() {
           href="/CV.pdf"
           target="_blank"
           download
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:text-violet-700 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
         >
           Download CV
           <HiDownload className="opacity-70 group-hover:translate-y-1 transition" />
@@ -89,7 +89,7 @@ export default function Intro() {
           // add destination
           href="https://www.linkedin.com/in/jamie-hitchcock-4641071b0/"
           target="_blank"
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
           <BsLinkedin />
         </a>
@@ -97,7 +97,7 @@ export default function Intro() {
           // add destination
           href="https://github.com/jamiehitchcock"
           target="_blank"
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
           <FaGithub />
         </a>
