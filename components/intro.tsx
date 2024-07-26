@@ -5,10 +5,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 // import Link from "next/link";
 import { useSectionInView } from "@/lib/hooks";
-import {  BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 // import { BsArrowRight } from "react-icons/bs";
 // import { HiDownload } from "react-icons/hi";
-import portrait from "@/public/images/portrait.jpg";
+import portrait from "@/public/images/portrait.jpeg";
 import { FaGithub } from "react-icons/fa";
 
 export default function Intro() {
@@ -61,7 +61,9 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, my name is <b className="text-violet-700">Jamie</b>.<br /> I&apos;m a <b className="text-violet-700">Front-End Developer</b> with 2 years of professional experience.
+        Hello, my name is <b className="text-violet-700">Jamie</b>.<br />{" "}
+        I&apos;m a <b className="text-violet-700">Front-End Developer</b> with 2
+        years of professional experience.
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 px-4 text-lg font-medium"
