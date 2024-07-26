@@ -8,7 +8,7 @@ import { useSectionInView } from "@/lib/hooks";
 import {  BsLinkedin } from "react-icons/bs";
 // import { BsArrowRight } from "react-icons/bs";
 // import { HiDownload } from "react-icons/hi";
-import portrait from "@/public/images/portrait.jpeg";
+import portrait from "@/public/images/portrait.jpg";
 import { FaGithub } from "react-icons/fa";
 
 export default function Intro() {
@@ -33,11 +33,11 @@ export default function Intro() {
               src={portrait}
               alt="portrait"
               // set file import size then set display size with styling
-              width="192"
-              height="192"
+              width="300"
+              height="300"
               quality="95"
               priority={true}
-              className="h-48 w-48 rounded-full object-cover border-[0.35rem] border-violet-700 shadow-xl"
+              className="h-48 w-48 md:h-80 md:w-80 rounded-full object-cover object-top border-[0.35rem] border-violet-700 shadow-xl"
             />
           </motion.div>
           {/* <motion.span
