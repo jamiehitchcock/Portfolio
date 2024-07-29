@@ -79,7 +79,7 @@ export const portfolioData = [
     tags: ["React.js", "JavaScript", "SASS", "API", "React Router"],
     imageUrl: CommandCentre,
     demo: "https://command-centre.netlify.app",
-    code: "https://github.com/jamiehitchcock/FE-Lib-Training/tree/main/02-API-Practice-Project/05-Sass-Command-Centre",
+    code: "https://github.com/jamiehitchcock/Command-Centre",
   },
   {
     title: "FilmDB",
@@ -88,7 +88,7 @@ export const portfolioData = [
     tags: ["React.js", "JavaScript", "SASS", "API"],
     imageUrl: FilmDB,
     demo: "https://react-filmdb.netlify.app/",
-    code: "https://github.com/jamiehitchcock/FE-Lib-Training/tree/main/03-Practice-Project-2/React-Films-App",
+    code: "https://github.com/jamiehitchcock/FilmDB",
   },
   {
     title: "International Space Station Tracker",
@@ -96,17 +96,17 @@ export const portfolioData = [
       "Track the location of the ISS against a world map in real time. This uses an API (WhereTheISS) to retrieve coordinates and velocity, then plots the location against a map using Leaflet.js and JavaScript.",
     tags: ["Leaflet.js", "JavaScript", "HTML", "CSS", "API"],
     imageUrl: InternationalSpaceStationTracker,
-    demo: "https://jamiehitchcock.co.uk/",
-    code: "https://github.com/jamiehitchcock/Portfolio",
+    demo: "https://jh-iss-tracker.netlify.app/",
+    code: "https://github.com/jamiehitchcock/International-Space-Station-Tracker",
   },
   {
     title: "Pomodoro Timer",
     description:
-      "A timer created for the pomodoro study method of 25 plus 5. I Created this in React as part of a 'Front-End Development Libraries' accreditation with FreeCodeCamp.",
+      "A timer created for the pomodoro productivity method of 25 mins of study, to 5 mins of break. An alarm will sound when the timer has expired and begin the alternate timer, then repeat.",
     tags: ["React.js", "JavaScript", "SASS", "Complex State Management"],
     imageUrl: PomodoroTimer,
     demo: "https://react-pomodoro-timer-jh.netlify.app",
-    code: "https://github.com/jamiehitchcock/FCC_FE-Lib_Projects/tree/main/Pomodoro_Timer",
+    code: "https://github.com/jamiehitchcock/Pomodoro-Timer",
   },
   {
     title: "Calculator",
@@ -121,7 +121,7 @@ export const portfolioData = [
     ],
     imageUrl: Calculator,
     demo: "https://react-calculator-jh.netlify.app/",
-    code: "https://github.com/jamiehitchcock/FCC_FE-Lib_Projects/tree/main/Calculator",
+    code: "https://github.com/jamiehitchcock/React-Calculator",
   },
   {
     title: "Roman Numeral Convertor",
@@ -129,8 +129,8 @@ export const portfolioData = [
       "Enter a number and the algorithm will convert this into a Roman Numeral using Javascript. I created this as a challenge for part of a FreeCodeCamp accreditation on 'JavaScript Data Structures and Algorithyms.'",
     tags: ["JavaScript", "HTML", "CSS", "Algorithms"],
     imageUrl: RomanNumeralConvertor,
-    demo: "https://jamiehitchcock.co.uk/",
-    code: "https://github.com/jamiehitchcock/Portfolio",
+    demo: "https://roman-numeral-convertor.netlify.app/",
+    code: "https://github.com/jamiehitchcock/Roman-Numeral-Convertor",
   },
   {
     title: "Real-Time Stock Market Checker",
@@ -138,8 +138,8 @@ export const portfolioData = [
       "This allows you to enter a symbol for a stock and view realtime information on its performance using an API (StockData). Try any public stock such as  AAPL, GOOG, PG or KO.",
     tags: ["JavaScript", "HTML", "CSS", "API"],
     imageUrl: StockMarketChecker,
-    demo: "https://jamiehitchcock.co.uk/",
-    code: "https://github.com/jamiehitchcock/Portfolio",
+    demo: "https://stock-market-checker.netlify.app/",
+    code: "https://github.com/jamiehitchcock/Stock-Market-Checker",
   },
   {
     title: "JamieHitchcock.co.uk - V2",
