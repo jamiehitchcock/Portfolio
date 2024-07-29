@@ -19,7 +19,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28 pt-28 sm:pt-36"
+      className="max-w-[50rem] text-center mb-36 sm:mb-8 scroll-mt-24 pt-28 sm:pt-24"
     >
       <div className="flex items-center justify-center">
         {/* relative to anchor emoji in absolute */}
@@ -37,7 +37,7 @@ export default function Intro() {
               height="300"
               quality="95"
               priority={true}
-              className="h-48 w-48 md:h-80 md:w-80 rounded-full object-cover object-top border-[0.35rem] border-violet-700 shadow-xl"
+              className="h-48 w-48 md:h-60 md:w-60 lg:h-80 lg:w-80 rounded-full object-cover object-top border-[0.35rem] border-violet-700 shadow-xl"
             />
           </motion.div>
           {/* <motion.span
@@ -57,7 +57,7 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl leading-[1.5] md:text-3xl lg:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
