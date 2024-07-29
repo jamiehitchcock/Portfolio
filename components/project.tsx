@@ -20,7 +20,7 @@ export default function Project({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
+    offset: ["0 1", "0.9 1"],
   });
   //   set scale to begin as 50% rather than 0
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
