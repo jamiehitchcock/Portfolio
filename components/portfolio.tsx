@@ -12,7 +12,7 @@ export default function Portfolio() {
   // const [technology, setTechnology] = useState("All");
 
   // custom hook for inView animation
-  const { ref } = useSectionInView("Portfolio", 0.2);
+  const { ref } = useSectionInView("Portfolio", 0.1);
 
   // function handleFilter(filter) {
   //   if (filter === "All") {
