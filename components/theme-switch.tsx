@@ -27,6 +27,9 @@ export default function ThemeSwitch() {
     //   if local storage has been set, then update theme
       if (localTheme){
           setTheme(localTheme);
+        //   use system preferences if local storage is not set
+      } else if (window.matchMedia("(prefers-color-scheme:dark)").matches){
+          setTheme("dark");
       }
   },[]);
 
