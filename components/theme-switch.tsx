@@ -14,9 +14,12 @@ export default function ThemeSwitch() {
     if (theme === "light") {
       setTheme("dark");
       window.localStorage.setItem("theme","dark");
+      // allow button to update class used in tailwind config
+      document.documentElement.classList.add("dark");
     } else {
       setTheme("light");
       window.localStorage.setItem("theme","light");
+      document.documentElement.classList.remove("dark");
     }
   };
 
@@ -27,9 +30,14 @@ export default function ThemeSwitch() {
     //   if local storage has been set, then update theme
       if (localTheme){
           setTheme(localTheme);
+
+          if(localTheme === "dark"){
+            document.documentElement.classList.add("dark");
+          }
         //   use system preferences if local storage is not set
       } else if (window.matchMedia("(prefers-color-scheme:dark)").matches){
           setTheme("dark");
+          document.documentElement.classList.add("dark");
       }
   },[]);
 

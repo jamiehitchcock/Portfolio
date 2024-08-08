@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative h-[5000px]`}
+        className={`${inter.className} bg-gray-50 text-gray-950 relative h-[5000px] dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         {/* background blur effect */}
         <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
