@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 html {
-    --line-color:#e5e7eb
+    --line-color:#e5e7eb;
 }
+
   /* scrollbar theme */
   ::-webkit-scrollbar{
     width: 1em;
@@ -16,4 +17,15 @@ html {
   background-color: rgb(109 40 217);
   border: 2px solid white;
   border-radius: 20px;
+}
+html.dark{
+  --line-color:rgba(255,255,255,0.2);
+}
+
+html.dark ::-webkit-scrollbar-track{
+  background-color: black;
+}
+
+html.dark ::-webkit-scrollbar-thumb{
+  border: 2px solid black;
 }
