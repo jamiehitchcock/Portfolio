@@ -83,7 +83,7 @@ export default function Intro() {
           href="/CV.pdf"
           target="_blank"
           download
-          className="hidden md:flex group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:text-violet-700 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          className="hidden md:flex group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:text-violet-700 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
         >
           Download CV
           <HiDownload className="opacity-70 group-hover:translate-y-1 transition" />
@@ -92,7 +92,7 @@ export default function Intro() {
           // add destination
           href="https://www.linkedin.com/in/jamie-hitchcock-4641071b0/"
           target="_blank"
-          className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10 dark:bg-gray-950 dark:border-white/60"
         >
           <BsLinkedin />
         </a>
@@ -100,7 +100,7 @@ export default function Intro() {
           // add destination
           href="https://github.com/jamiehitchcock"
           target="_blank"
-          className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-4 text-violet-600 hover:text-violet-800 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10 dark:bg-gray-950 dark:border-white/60"
         >
           <FaGithub />
         </a>

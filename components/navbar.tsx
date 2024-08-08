@@ -23,12 +23,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white text-gray-500 z-10 fixed top-0 w-[100%] shadow-lg shadow-black/[0.03]">
+      <nav className="bg-white text-gray-500 z-10 fixed top-0 w-[100%] shadow-lg shadow-black/[0.03] dark:bg-gray-950 dark:text-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <div className="text-gray-950 text-2xl font-bold">
+                <div className="text-gray-950 text-2xl font-bold dark:text-white">
                   <span className="text-violet-700">J</span>amie <span className="text-violet-700">H</span>itchcock
                 </div>
               </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
                       }}
                       className={clsx("hover:text-violet-800 p-2 transition", {
                         // clsx to apply conditional text styling to active section
-                        "text-white hover:text-white": activeSection === link.name,
+                        "text-white hover:text-white dark:text-gray-950 dark:hover:text-gray-950": activeSection === link.name,
                       })}
                     >
                       {link.name}
