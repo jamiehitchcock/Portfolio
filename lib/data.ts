@@ -15,6 +15,7 @@ import {
   SiBootstrap,
 } from "react-icons/si";
 import { LuGraduationCap } from "react-icons/lu";
+import { FaFreeCodeCamp } from "react-icons/fa";
 import CommandCentre from "@/public/images/CommandCentre.jpeg";
 import FilmDB from "@/public/images/FilmDB.jpeg";
 import InternationalSpaceStationTracker from "@/public/images/InternationalSpaceStationTracker.jpeg";
@@ -67,7 +68,15 @@ export const experiencesData = [
     location: "Remote",
     description: "I won the awards of 'Star Pupil' and 'Best Portfolio'.",
     icon: React.createElement(LuGraduationCap),
-    date: "January - April 2022",
+    date: "January 2022 - April 2022",
+  },
+  {
+    title: "Software Developer Pathway",
+    organisation: "FreeCodeCamp",
+    location: "Remote",
+    description: "'Responsive Web Design', 'JavaScript Algorithms and Data Structures', 'Front End Development Libraries'.",
+    icon: React.createElement(FaFreeCodeCamp),
+    date: "July 2021 - May 2024",
   },
 ] as const;
 

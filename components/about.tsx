@@ -16,7 +16,7 @@ const jsonBio = {
   work_preference: "Hybrid",
   operating_systems:["Windows", "MacOS"],
   favourite_language: "JavaScript",
-  focusing_on:["Next.js","React.js"],
+  focusing_on:["Next.js","React.js","TypeScript"],
   can_not_live_without: ["my wife","coffee"],
   dream_car: "Porsche 911",
   hobbies: ["coding","record collecting", "travelling"],
