@@ -14,12 +14,12 @@ const jsonBio = {
   years_of_experience: 2,
   location: "Reading",
   work_preference: "Hybrid",
-  operating_systems: "Windows or MacOS",
+  operating_systems:["Windows", "MacOS"],
   favourite_language: "JavaScript",
-  currently_learning:"Next.js",
-  can_not_live_without: ["coffee", "my wife"],
+  focusing_on:["Next.js","React.js"],
+  can_not_live_without: ["my wife","coffee"],
   dream_car: "Porsche 911",
-  hobbies: ["record collecting", "travelling"],
+  hobbies: ["coding","record collecting", "travelling"],
 };
 
 export default function About() {
@@ -66,7 +66,7 @@ export default function About() {
 
       {showJSON && (
         <div className="flex flex-col items-center">
-          <pre className="mb-3 bg-stone-800 text-lime-500 w-fit">
+          <pre className="mb-3 bg-white text-black w-fit dark:bg-black dark:text-white">
             <code>{JSON.stringify(jsonBio, undefined, 2)}</code>
           </pre>
         </div>
