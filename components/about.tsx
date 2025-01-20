@@ -7,19 +7,24 @@ import { useSectionInView } from "@/lib/hooks";
 
 const jsonBio = {
   name: {
-    firstname: "Jamie",
-    lastname: "Hitchcock",
+    first_name: "Jamie",
+    last_name: "Hitchcock",
   },
   title: "Front End Developer",
-  years_of_experience: 2,
+  first_hello_world: "July 2021",
+  years_of_professional_experience: 2,
   location: "Reading",
   work_preference: "Hybrid",
   operating_systems:["Windows", "MacOS"],
   favourite_language: "JavaScript",
   focusing_on:["Next.js","React.js","TypeScript"],
-  can_not_live_without: ["my wife","coffee"],
-  dream_car: "Porsche 911",
-  hobbies: ["coding","record collecting", "travelling"],
+  can_not_live_without: ["Wife","Coffee"],
+  dream_car: {
+    "manufacturer": "Ford",
+    "model": "S550 Mustang GT",
+    "color": "Black"
+  },
+  hobbies: ["Coding", "Record collecting", "Travelling", "American football"],
 };
 
 export default function About() {
