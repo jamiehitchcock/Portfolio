@@ -81,15 +81,15 @@ export const experiencesData = [
 ] as const;
 
 export const portfolioData = [
-  {
-    title: "Command Centre",
-    description:
-      "A companion app for a live service video game called Helldivers 2, created in React. This uses API calls to update users with real time data relating to Helldivers 2. Meaning that you can get the latest news whilst on the go.",
-    tags: ["React.js", "JavaScript", "SASS", "API", "React Router"],
-    imageUrl: CommandCentre,
-    demo: "https://command-centre.netlify.app",
-    code: "https://github.com/jamiehitchcock/Command-Centre",
-  },
+  // {
+  //   title: "Command Centre",
+  //   description:
+  //     "A companion app for a live service video game called Helldivers 2, created in React. This uses API calls to update users with real time data relating to Helldivers 2. Meaning that you can get the latest news whilst on the go.",
+  //   tags: ["React.js", "JavaScript", "SASS", "API", "React Router"],
+  //   imageUrl: CommandCentre,
+  //   demo: "https://command-centre.netlify.app",
+  //   code: "https://github.com/jamiehitchcock/Command-Centre",
+  // },
   {
     title: "FilmDB",
     description:
