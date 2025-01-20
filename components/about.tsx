@@ -12,7 +12,7 @@ const jsonBio = {
   },
   title: "Front End Developer",
   first_hello_world: "July 2021",
-  years_of_professional_experience: 2,
+  years_of_professional_experience: "2",
   location: "Reading",
   work_preference: "Hybrid",
   operating_systems:["Windows", "MacOS"],
