@@ -76,7 +76,7 @@ export const experiencesData = [
     location: "Remote",
     description: "'Responsive Web Design', 'JavaScript Algorithms and Data Structures', 'Front End Development Libraries'.",
     icon: React.createElement(FaFreeCodeCamp),
-    date: "July 2021 - May 2024",
+    date: "July 2021 - January 2022",
   },
 ] as const;
 
